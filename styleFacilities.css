@@ -1,0 +1,997 @@
+/*---------------------------------------------------- GENERAL RULES ---------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Home Kitchen';
+    src: url(fonts/Home\ Kitchen.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*---------------------------------------------------- SECTION HERO AND NAVBAR ---------------------------------------------------------------*/
+
+.home {
+    width: 100%;
+    height: 70vh;
+    background: url(img/facilities/Giraffes.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+.header {
+    width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 100%;
+    background-image: url(img/icons/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: static;
+    background: none;
+    height: 100%;
+    width: 100%;
+    transition: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.navbar li a {
+    transition: all .3s ease-in-out;
+}
+
+.navbar li a:hover {
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+.menu {
+    width: 40%;
+    height: 100%;
+    position: static;
+}
+
+.menu-btn {
+    box-sizing: border-box;
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-right: 15px;
+}
+
+.menu-btn-bars {
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before,
+.menu-btn-bars::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before {
+    transform: translateY(-14px);
+}
+
+.menu-btn-bars::after {
+    transform: translateY(14px);
+}
+
+.cross .menu-btn-bars {
+    background: transparent;
+    transform: translateX(-50px);
+}
+
+.cross .menu-btn-bars::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.cross .menu-btn-bars::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+}
+
+.title-div {
+    width: 100%;
+    height: 92vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.title {
+    font-size: clamp(3rem, 1rem + 6.6667vw, 9rem);
+    padding-bottom: 250px;
+    font-family: 'Home Kitchen';
+    color: white;
+}
+
+
+/*---------------------------------------------------- SECTION ABOUT ---------------------------------------------------------------*/
+
+.about {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-title {
+    display: flex;
+    width: 100%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.about-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+}
+
+.about-information {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify;
+    padding-right: 50px;
+
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    line-height: 1.5;
+}
+
+.about-img {
+    flex: 1;
+
+    background-image: url(img/facilities/facilities.jpg);
+    height: 60%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*---------------------------------------------------- SECTION ANIMALS ---------------------------------------------------------------*/
+.animals {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.animals-title {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.animals-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    padding-bottom: 30px;
+}
+
+.gallery-photos {
+    width: 92%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    transition: all .3s ease-in-out;
+}
+
+.gallery-item {
+    width: 32%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 5px;
+}
+
+.gallery-photos1 {
+    background-image: url(img/facilities/Bears.jpg);
+}
+
+.gallery-photos2 {
+    background-image: url(img/facilities/Bengala-tiger.jpg);
+}
+
+.gallery-photos3 {
+    background-image: url(img/facilities/Chimpanzee.jpg);
+}
+
+.gallery-photos4 {
+    background-image: url(img/facilities/Flamingos.jpg);
+}
+
+.gallery-photos5 {
+    background-image: url(img/facilities/Lemur.jpg);
+}
+
+.gallery-photos6 {
+    background-image: url(img/facilities/Parrot.jpg);
+}
+
+.gallery-photos7 {
+    background-image: url(img/facilities/Penguins.jpg);
+}
+
+.gallery-photos8 {
+    background-image: url(img/facilities/Toucan.jpg);
+}
+
+.gallery-photos9 {
+    background-image: url(img/facilities/Hippo.jpg);
+}
+
+.hvr-bounce-to-bottom {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.hvr-bounce-to-bottom:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .8);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-bounce-to-bottom:hover,
+.hvr-bounce-to-bottom:focus,
+.hvr-bounce-to-bottom:active {
+    color: white;
+}
+
+.hvr-bounce-to-bottom:hover>h4,
+.hvr-bounce-to-bottom:focus>h4,
+.hvr-bounce-to-bottom:active>h4 {
+    visibility: visible;
+}
+
+.hvr-bounce-to-bottom:hover:before,
+.hvr-bounce-to-bottom:focus:before,
+.hvr-bounce-to-bottom:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.galleryback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galleryback h4 {
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    margin: 0;
+    visibility: hidden;
+}
+
+
+/*---------------------------------------------------- SECTION FACILITIES ---------------------------------------------------------------*/
+.habitats {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.habitat-title {
+    display: flex;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.habitat-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    padding-bottom: 100px;
+}
+
+.habitats-title {
+    margin: 50px;
+    font-size: clamp(1.5rem, 1.0667rem + 1.4444vw, 2.8rem);
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.glider-contain {
+    width: 100%;
+    height: 775px;
+}
+
+.glider {
+    width: 100%;
+    height: 775px;
+}
+
+.glider-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.glider-track {
+    height: 775px;
+}
+
+.glider-dots {
+    position: absolute;
+    width: 431px;
+    bottom: 105px;
+    left: 70px;
+}
+
+.glider-dots::before {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid white;
+    position: absolute;
+    top: 5px;
+}
+
+.glider-dot::after {
+    content: attr("day");
+    display: block;
+    position: absolute;
+    top: 20px;
+}
+
+.habitat-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: calc(100% - 575px);
+    height: 100%;
+}
+
+.habitat-content {
+    width: 575px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.habitat-content h4 {
+    font-size: clamp(1.5rem, 1.0667rem + 1.4444vw, 2.8rem);
+    margin: 40px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.habitat-content h5 {
+    font-size: clamp(1rem, 0.6667rem + 1.1111vw, 2rem);
+    margin: 20px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.habitat-content p {
+    width: 100%;
+    font-weight: 200;
+    font-size: clamp(0.8rem, 0.7333rem + 0.2222vw, 1rem);
+    letter-spacing: 1px;
+    line-height: 36px;
+    text-align: justify;
+}
+
+.habitat-1 {
+    background-image: url(img/facilities/habitat1.jpg);
+}
+
+.habitat-2 {
+    background-image: url(img/facilities/habitat2.jpg);
+}
+
+.habitat-3 {
+    background-image: url(img/facilities/habitat3.jpg);
+}
+
+.habitat-4 {
+    background-image: url(img/facilities/habitat4.jpg);
+}
+
+.habitat-5 {
+    background-image: url(img/facilities/habitat5.jpg);
+}
+
+.habitat-6 {
+    background-image: url(img/facilities/habitat6.jpg);
+}
+
+.habitat-7 {
+    background-image: url(img/facilities/habitat7.jpg);
+}
+
+.habitat-8 {
+    background-image: url(img/facilities/habitat8.jpg);
+}
+
+.habitat-9 {
+    background-image: url(img/facilities/habitat9.jpg);
+}
+
+.habitat-10 {
+    background-image: url(img/facilities/habitat10.jpg);
+}
+
+.habitat-11 {
+    background-image: url(img/facilities/habitat11.jpg);
+}
+
+.habitat-12 {
+    background-image: url(img/facilities/habitat12.jpg);
+}
+
+.habitat-13 {
+    background-image: url(img/facilities/habitat13.jpg);
+}
+
+.habitat-14 {
+    background-image: url(img/facilities/habitat14.jpg);
+}
+
+.habitat-15 {
+    background-image: url(img/facilities/habitat15.jpg);
+}
+
+.habitat-16 {
+    background-image: url(img/facilities/habitat16.jpg);
+}
+
+.habitat-17 {
+    background-image: url(img/facilities/habitat17.jpg);
+}
+
+.habitat-18 {
+    background-image: url(img/facilities/habitat18.jpg);
+}
+
+
+/*---------------------------------------------------- FOOTER ---------------------------------------------------------------*/
+.footer {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    height: 500px;
+
+    margin-left: 0 auto;
+}
+
+.footer-logo {
+    width: 60%;
+    padding-top: 50px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: 50px;
+}
+
+.footer-learn,
+.footer-contact,
+.footer-partners {
+    padding: 10px;
+    width: 20%;
+    height: 300px;
+}
+
+.footer-subtitle {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 25px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    font-family: 'Roboto Thin', sans-serif;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-text img {
+    height: 25px;
+    width: 35px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.rrss {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 30px;
+    width: 40%;
+}
+
+.rrss img {
+    margin-top: 10px;
+    height: 25px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.footer-partners img {
+    height: 50px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.footer-policy {
+    color: white;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+}
+
+.footer-copyright {
+    display: flex;
+
+    align-items: center;
+    align-content: center;
+    padding-left: 50px;
+}
+
+.footer-copyright-subtitle {
+    font-size: clamp(0.6rem, 0.4667rem + 0.4444vw, 1rem);
+}
+
+
+.footer-policies {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    padding-right: 50px;
+}
+
+.footer-policies p {
+    font-size: clamp(0.6rem, 0.4667rem + 0.4444vw, 1rem);
+    cursor: pointer;
+}
+
+.footer-copyright,
+.footer-policies {
+    flex: 1;
+}
+
+hr {
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*---------------------------------------------------- MEDIA QUERIES ---------------------------------------------------------------*/
+@media screen and (max-width: 1400px) {
+    .header {
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        left: auto;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        justify-self: right;
+        height: 89.5vh;
+        list-style-type: none;
+        text-align: center;
+        background: rgba(0, 0, 0, .8);
+        transition: all .5s ease-in-out;
+        z-index: 9999;
+    }
+
+    .open {
+        width: 49vw;
+    }
+
+    .navbar li {
+        margin: 50px 0;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .about-information {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .about-text {
+        padding-right: 0;
+    }
+
+    .about-img {
+        margin-bottom: 50px;
+    }
+
+    .glider-contain,
+    .glider,
+    .glider-track {
+        height: auto;
+        padding: 0;
+    }
+
+    .habitat-title {
+        font-size: 36px;
+    }
+
+    .glider-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .habitat-img {
+        width: 100%;
+        height: 500px;
+    }
+
+    .habitat-content {
+        width: 100%;
+        order: 2;
+        height: 50%;
+        padding: 80px;
+    }
+
+    .habitat-content h4 {
+        margin: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .habitat-content h5 {
+        text-align: center;
+    }
+
+    .days {
+        display: none;
+    }
+
+    .glider-dots {
+        width: 0;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .arrow-left {
+        background-image: url(img/facilities/arrow-left.png);
+    }
+
+    .arrow-right {
+        background-image: url(img/facilities/arrow-right.png);
+    }
+
+    .prev-1,
+    .prev-2,
+    .prev-3 {
+        position: absolute;
+        top: 650px;
+        left: 30px;
+    }
+
+    .next-1,
+    .next-2,
+    .next-3 {
+        position: absolute;
+        top: 650px;
+        right: 30px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .about-text {
+        padding-bottom: 50px;
+        flex: auto;
+    }
+
+    .about-img {
+        flex: auto;
+    }
+
+    .footer-learn, .footer-contact, .footer-partners {
+        width: 30%;
+    }
+
+    .footer-logo {
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    .footer-content {
+        width: 90%;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+    }
+
+    .rrss {
+        width: 90%;
+    }
+
+    .footer-text img {
+        display: none;
+    }
+
+    .footer-partners img {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer-policy {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer-copyright, .footer-policies {
+        width: 90%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .gallery-item {
+        width: 48%;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-content {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-logo {
+        width: 82%;
+    }
+
+    .footer-learn, .footer-contact, .footer-partners {
+        width: 90%;
+        padding-bottom: 30px;
+    }
+
+    .rrss {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home {
+        height: 100vh;
+        background-position: -750px center;
+    }
+
+    .about-information {
+        height: 150vh;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .habitat-title p {
+        padding-bottom: 50px;
+    }
+
+    .next-1, .next-2, .next-3, .prev-1, .prev-2, .prev-3 {
+        top: 800px;
+    }
+
+    .footer-partners {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .footer-partners img {
+        width: 300px;
+    }
+
+    .footer-policy {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-copyright {
+        padding-top: 10px;
+        padding-left: 0;
+    }
+
+    .footer-policies {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 10px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}

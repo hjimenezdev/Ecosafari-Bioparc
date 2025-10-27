@@ -1,0 +1,892 @@
+/*---------------------------------------------------- GENERAL RULES ---------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Home Kitchen';
+    src: url(fonts/Home\ Kitchen.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*---------------------------------------------------- SECTION HERO AND NAVBAR ---------------------------------------------------------------*/
+
+.home {
+    width: 100%;
+    height: 73vh;
+    background: url(img/contact/Koala.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+.header {
+    width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 100%;
+    background-image: url(img/icons/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: static;
+    background: none;
+    height: 100%;
+    width: 100%;
+    transition: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.navbar li a {
+    transition: all .3s ease-in-out;
+}
+
+.navbar li a:hover {
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+.menu {
+    width: 40%;
+    height: 100%;
+    position: static;
+}
+
+.menu-btn {
+    box-sizing: border-box;
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-right: 15px;
+}
+
+.menu-btn-bars {
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before,
+.menu-btn-bars::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before {
+    transform: translateY(-14px);
+}
+
+.menu-btn-bars::after {
+    transform: translateY(14px);
+}
+
+.cross .menu-btn-bars {
+    background: transparent;
+    transform: translateX(-50px);
+}
+
+.cross .menu-btn-bars::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.cross .menu-btn-bars::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+}
+
+/*---------------------------------------------------- SECTION CONTACT ---------------------------------------------------------------*/
+
+.contact {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.contact-title {
+    display: flex;
+    width: 100%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.contact-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+}
+
+.contact-information {
+    width: 100%;
+    margin: auto;
+    background-image: url(img/contact/Red-panda.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 1000px;
+}
+
+.form-title {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.text {
+    padding-top: 50px;
+}
+
+.text input {
+    padding-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: black;
+    font-size: 20px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 390px;
+}
+
+.line {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: black;
+}
+
+.rectangle {
+    margin-left: 30px;
+    width: 500px;
+    height: 700px;
+    background-color: rgba(255, 255, 255);
+}
+
+.cta {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    align-content: end;
+
+    height: 300px;
+}
+
+.contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: rgba(0, 0, 0, .8);
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.contact-button:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.contact-button-text {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+/*---------------------------------------------------- SECTION TESTIMONIALS ---------------------------------------------------------------*/
+.testimonials {
+    width: 100%;
+    height: auto;
+    padding: 100px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.testimonials-title {
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.testimonials-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.testimonials-div {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 50px;
+}
+
+.testimonials-div-title {
+    font-size: clamp(1.2rem, 0.9333rem + 0.8889vw, 2rem);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.testimonials-img img {
+    object-fit: cover;
+    border-radius: 150px;
+}
+
+.testimonials-text {
+    flex: 1;
+    padding: 0 20px 20px 20px;
+    padding-bottom: 0px;
+
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    line-height: 1.5;
+}
+
+.testimonials-description {
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+
+/*---------------------------------------------------- SECTION BOOKING ---------------------------------------------------------------*/
+
+.booking {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.booking-title {
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 100px;
+}
+
+.booking-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+}
+
+.booking-information {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.booking-information-subtitle {
+    font-size: clamp(1rem, 0.8333rem + 0.5556vw, 1.5rem);
+    text-align: justify;
+}
+
+.tickets-booking {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.booking-rectangle {
+    height: 500px;
+    width: 450px;
+    border: 1px solid black;
+}
+
+.booking-rectangle-title {
+    margin: 20px;
+    color: black;
+    font-size: clamp(1rem, 0.8333rem + 0.5556vw, 1.5rem);
+}
+
+.booking-rectangle-subtitle {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black;
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    text-align: justify;
+    padding-bottom: 80px;
+}
+
+.booking-rectangle-price {
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+    font-size: clamp(1.5rem, 1.1667rem + 1.1111vw, 2.5rem);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.price {
+    text-align: center;
+    font-size: clamp(2rem, 1.6667rem + 1.1111vw, 3rem);
+    padding-bottom: 100px;
+}
+
+.booking-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: rgba(0, 0, 0, .8);
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.booking-button:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.booking-button-text {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+/*---------------------------------------------------- SECTION LOCATION ---------------------------------------------------------------*/
+
+.location {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: left;
+    align-content: left;
+}
+
+.location-title, .bioparc-title {
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 100px;
+}
+
+.location-title p, .bioparc-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+}
+
+.location-subtitle, .bioparc-map-subtitle {
+    font-size: clamp(1rem, 0.8333rem + 0.5556vw, 1.5rem);
+    text-align: justify;
+}
+
+.bioparc-map {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 100px;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: left;
+    align-content: left;
+}
+
+.bioparc-map-image {
+    background-image: url(img/contact/Bioparc-map.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+/*---------------------------------------------------- FOOTER ---------------------------------------------------------------*/
+
+.footer {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    height: 500px;
+
+    margin-left: 0 auto;
+}
+
+.footer-logo {
+    width: 60%;
+    padding-top: 50px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: 50px;
+}
+
+.footer-learn, .footer-contact, .footer-partners {
+    padding: 10px;
+    width: 20%;
+    height: 300px;
+}
+
+.footer-subtitle {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 25px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    font-family: 'Roboto Thin', sans-serif;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-text img {
+    height: 25px;
+    width: 35px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.rrss {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 30px;
+    width: 40%;
+}
+
+.rrss img {
+    margin-top: 10px;
+    height: 25px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.footer-partners img {
+    height: 50px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.footer-policy {
+    color: white;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+}
+
+.footer-copyright {
+    display: flex;
+
+    align-items: center;
+    align-content: center;
+    padding-left: 50px;
+}
+
+.footer-copyright-subtitle {
+    font-size: clamp(0.6rem, 0.4667rem + 0.4444vw, 1rem);
+}
+
+
+.footer-policies {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    padding-right: 50px;
+}
+
+.footer-policies p {
+    font-size: clamp(0.6rem, 0.4667rem + 0.4444vw, 1rem);
+    cursor: pointer;
+}
+
+.footer-copyright, .footer-policies {
+    flex: 1;
+}
+
+.footer-line {
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*---------------------------------------------------- MEDIA QUERIES ---------------------------------------------------------------*/
+@media screen and (max-width: 1400px) {
+    .header {
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        left: auto;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        justify-self: right;
+        height: 89.5vh;
+        list-style-type: none;
+        text-align: center;
+        background: rgba(0, 0, 0, .8);
+        transition: all .5s ease-in-out;
+        z-index: 9999;
+    }
+
+    .open {
+        width: 49vw;
+    }
+
+    .navbar li {
+        margin: 50px 0;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        display: none;
+    }
+
+    .tickets-booking {
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        height: 200vh;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .footer-learn, .footer-contact, .footer-partners {
+        width: 30%;
+    }
+
+    .footer-logo {
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    .footer-content {
+        width: 90%;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+    }
+
+    .rrss {
+        width: 90%;
+    }
+
+    .footer-text img {
+        display: none;
+    }
+
+    .footer-partners img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer-partners img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact-information {
+        background-image: none;
+        min-height: auto;
+    }
+
+    .form-title {
+        display: none;
+    }
+
+    .rectangle {
+        margin-left: 0;
+        width: 100%;
+        height: 60vh;
+    }
+
+    .button {
+        height: 150px;
+    }
+
+    .contact-button {
+        width: 87%;
+    }
+
+    .testimonials-div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .testimonials-text {
+        order: 2;
+    }
+
+    .footer-policy {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer-copyright, .footer-policies {
+        width: 90%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .footer {
+        height: auto;
+    }
+
+    .footer-content {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-logo {
+        width: 82%;
+    }
+
+    .footer-learn, .footer-contact, .footer-partners {
+        width: 90%;
+        padding-bottom: 30px;
+    }
+
+    .rrss {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .testimonials {
+        padding: 30px;
+    }
+
+    .testimonials-img {
+        padding-bottom: 30px;
+    }
+
+    .text input {
+        margin-right: 0px;
+    }
+
+    .booking-rectangle {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .bioparc-map {
+        display: none;
+    }
+
+    iframe {
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-title {
+        padding-bottom: 0;
+    }
+
+    .line {
+        margin-left: 30px;
+    }
+
+    .text input {
+        margin-left: 30px;
+    }
+
+    .button {
+        height: 100px;
+    }
+
+    .tickets-booking {
+        height: 170vh;
+    }
+
+    .footer-partners {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .footer-partners img {
+        width: 300px;
+    }
+
+    .footer-policy {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-copyright {
+        padding-top: 10px;
+        padding-left: 0;
+    }
+
+    .footer-policies {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 10px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}

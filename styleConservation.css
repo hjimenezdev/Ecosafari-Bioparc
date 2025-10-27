@@ -1,0 +1,730 @@
+/*---------------------------------------------------- GENERAL RULES ---------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Home Kitchen';
+    src: url(fonts/Home\ Kitchen.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*---------------------------------------------------- SECTION HERO AND NAVBAR ---------------------------------------------------------------*/
+
+.home {
+    width: 100%;
+    height: 70vh;
+    background: url(img/conservation/Tiger.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+.header {
+    width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 100%;
+    background-image: url(img/icons/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: static;
+    background: none;
+    height: 100%;
+    width: 100%;
+    transition: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.navbar li a {
+    transition: all .3s ease-in-out;
+}
+
+.navbar li a:hover {
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+.menu {
+    width: 40%;
+    height: 100%;
+    position: static;
+}
+
+.menu-btn {
+    box-sizing: border-box;
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-right: 15px;
+}
+
+.menu-btn-bars {
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before,
+.menu-btn-bars::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before {
+    transform: translateY(-14px);
+}
+
+.menu-btn-bars::after {
+    transform: translateY(14px);
+}
+
+.cross .menu-btn-bars {
+    background: transparent;
+    transform: translateX(-50px);
+}
+
+.cross .menu-btn-bars::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.cross .menu-btn-bars::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+}
+
+/*---------------------------------------------------- SECTION CONSERVATION ---------------------------------------------------------------*/
+
+.about {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-title {
+    display: flex;
+    width: 100%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.about-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+}
+
+.about-information {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify;
+    padding-right: 50px;
+
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    line-height: 1.5;
+}
+
+.about-img {
+    flex: 1;
+
+    background-image: url(img/conservation/conservation.jpg);
+    height: 60%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*---------------------------------------------------- SECTION CONSERVATION ---------------------------------------------------------------*/
+
+.conservation {
+    width: 100%;
+    height: auto;
+    padding-bottom: 150px;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.conservation-title {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.conservation-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    padding-bottom: 50px;
+}
+
+.conservation-information {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.conservation-subtitle {
+    font-size: clamp(1.5rem, 1.5rem + 1.6667vw, 2.5rem);
+    padding: 20px;
+}
+
+.conservation-text {
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    line-height: 1.5;
+    text-align: justify;
+    padding: 20px;
+}
+
+.conservation-card {
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 50px;
+
+    border: 1px solid black;
+}
+
+.read-more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: rgba(0, 0, 0, .8);
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.read-more-button:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.read-more-button-text {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+/*---------------------------------------------------- SECTION ENDANGERED SPECIES ---------------------------------------------------------------*/
+
+.endangered-species {
+    width: 100%;
+    height: auto;
+    padding-bottom: 150px;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.endangered-species-title {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.endangered-species-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    padding-bottom: 30px;
+}
+
+.endangered-species-photos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.specie {
+    width: 30%;
+    line-height: 1.8;
+}
+
+.photos-title {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: clamp(1.5rem, 1.3333rem + 0.5556vw, 2rem);
+    line-height: 1.2;
+}
+
+.photos-subtitle {
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+}
+
+.img-specie-owl {
+    min-height: 400px;
+    background-image: url(img/conservation/Owl.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 500px;
+}
+
+.img-specie-kangaroo {
+    min-height: 400px;
+    background-image: url(img/conservation/Kangaroo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 500px;
+}
+
+.img-specie-parakeet {
+    min-height: 400px;
+    background-image: url(img/conservation/Parakeet.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 500px;
+}
+
+/*---------------------------------------------------- FOOTER ---------------------------------------------------------------*/
+.footer {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    height: 500px;
+
+    margin-left: 0 auto;
+}
+
+.footer-logo {
+    width: 60%;
+    padding-top: 50px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: 50px;
+}
+
+.footer-learn, .footer-contact, .footer-partners {
+    padding: 10px;
+    width: 20%;
+    height: 300px;
+}
+
+.footer-subtitle {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 25px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    font-family: 'Roboto Thin', sans-serif;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-text img {
+    height: 25px;
+    width: 35px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.rrss {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 30px;
+    width: 40%;
+}
+
+.rrss img {
+    margin-top: 10px;
+    height: 25px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.footer-partners img {
+    height: 50px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.footer-policy {
+    color: white;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+}
+
+.footer-copyright {
+    display: flex;
+
+    align-items: center;
+    align-content: center;
+    padding-left: 50px;
+}
+
+.footer-copyright-subtitle {
+    font-size: clamp(0.6rem, 0.4667rem + 0.4444vw, 1rem);
+}
+
+
+.footer-policies {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    padding-right: 50px;
+}
+
+.footer-policies p {
+    font-size: clamp(0.6rem, 0.4667rem + 0.4444vw, 1rem);
+    cursor: pointer;
+}
+
+.footer-copyright, .footer-policies {
+    flex: 1;
+}
+
+hr {
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/*---------------------------------------------------- MEDIA QUERIES ---------------------------------------------------------------*/
+
+@media screen and (max-width: 1400px) {
+    .header {
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        left: auto;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        justify-self: right;
+        height: 89.5vh;
+        list-style-type: none;
+        text-align: center;
+        background: rgba(0, 0, 0, .8);
+        transition: all .5s ease-in-out;
+        z-index: 9999;
+    }
+
+    .open {
+        width: 49vw;
+    }
+
+    .navbar li {
+        margin: 50px 0;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .about-information {
+        flex-direction: column;
+        height: 140vh;
+        margin-bottom: 50px;
+    }
+
+    .about-text {
+        padding-right: 0;
+    }
+
+    .conservation-card {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .footer-learn, .footer-contact, .footer-partners {
+        width: 30%;
+    }
+
+    .footer-logo {
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    .footer-content {
+        width: 90%;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+    }
+
+    .rrss {
+        width: 90%;
+    }
+
+    .footer-text img {
+        display: none;
+    }
+
+    .footer-partners img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .endangered-species-photos {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .specie {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .footer-partners img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer-policy {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer-copyright, .footer-policies {
+        width: 90%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .conservation-card {
+        width: 100%;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-content {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-logo {
+        width: 82%;
+    }
+
+    .footer-learn, .footer-contact, .footer-partners {
+        width: 90%;
+        padding-bottom: 30px;
+    }
+
+    .rrss {
+        width: 40%;
+    }
+
+    .footer-partners img {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home {
+        height: 100vh;
+        background-position: -200px center;
+    }
+
+    .about-information {
+        height: 150vh;
+    }
+
+    .about-text {
+        margin-bottom: 50px;
+    }
+
+    .footer-partners {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .footer-partners img {
+        width: 300px;
+    }
+
+    .footer-policy {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-copyright {
+        padding-top: 10px;
+        padding-left: 0;
+    }
+
+    .footer-policies {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 10px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
